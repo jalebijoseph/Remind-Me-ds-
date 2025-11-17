@@ -1,72 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'secrets.dart';
-import 'app_colors.dart';
-import 'features/auth/auth_page.dart';
-import 'features/meds/home_page.dart';
-import 'services/notifier.dart';
-import 'services/reminder_watcher.dart';
-import 'globals.dart';
+
+import 'theme.dart';
+import 'screens/login_screen.dart';
+import 'screens/home_screen.dart';
+import 'services/reminder_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // sanity check your dart-defines arrived
-  // ignore: avoid_print
-  print('URL = ${Secrets.supabaseUrl}');
-  // ignore: avoid_print
-  print('ANON length = ${Secrets.supabaseAnonKey.length}');
+  await Supabase.initialize(
+    url: 'https://vslhzmmianlxfktytcxu.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZzbGh6bW1pYW5seGZrdHl0Y3h1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI4MTU4MzIsImV4cCI6MjA3ODM5MTgzMn0.PGciYkpPNUoblYsU9aDiHKnQd7AsKdFLxnJXoxLH6Ag',
+  );
 
-  await Supabase.initialize(url: Secrets.supabaseUrl, anonKey: Secrets.supabaseAnonKey);
-  await Notifier.init();
-  await ReminderWatcher().start(); // live scheduling + in-app alerts while open
+  await reminderService.init();
 
-  runApp(const MedsApp());
+  runApp(const RemindMedsApp());
 }
 
-class MedsApp extends StatelessWidget {
-  const MedsApp({super.key});
+class RemindMedsApp extends StatelessWidget {
+  const RemindMedsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final loggedIn = Supabase.instance.client.auth.currentUser != null;
+    final user = Supabase.instance.client.auth.currentUser;
+
     return MaterialApp(
+      title: 'Remind Me(ds)',
       debugShowCheckedModeBanner: false,
-      scaffoldMessengerKey: scaffoldMessengerKey,
-      title: 'Meds Companion',
-      theme: ThemeData(
-        useMaterial3: true,
-        scaffoldBackgroundColor: AppColors.background,
-        colorScheme: ColorScheme.light(
-          primary: AppColors.primary,
-          secondary: AppColors.secondary,
-          error: AppColors.danger,
-          surface: AppColors.background,
-          onSurface: AppColors.textDeep,
-        ),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.primary,
-          foregroundColor: Colors.white,
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.primary,
-            foregroundColor: Colors.white,
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(14)),
-            ),
-          ),
-        ),
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(color: AppColors.textDeep),
-          titleLarge: TextStyle(color: AppColors.textDeep, fontWeight: FontWeight.bold),
-        ),
-      ),
-      initialRoute: loggedIn ? '/home' : '/auth',
-      routes: {
-        '/auth': (_) => const AuthPage(),
-        '/home': (_) => const HomePage(),
-      },
+      theme: lightPastelTheme,
+      darkTheme: darkPastelTheme,
+      themeMode: ThemeMode.system,
+      home: user == null ? const LoginScreen() : const HomeScreen(),
     );
   }
 }

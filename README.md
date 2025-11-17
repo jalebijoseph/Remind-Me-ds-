@@ -1,16 +1,44 @@
-# meds_app
+# Remind Me(ds) 💊
 
-A new Flutter project.
+> **Your meds, your schedule, and your health cared for.**
 
-## Getting Started
+Remind Me(ds) is a pastel-styled, cross-platform medication management app built with **Flutter** and **Supabase**. It helps users:
 
-This project is a starting point for a Flutter application.
+- Log medications, purposes, illnesses, dosages, and pill counts  
+- Track remaining pills and get **refill alerts**  
+- Receive **daily notifications** to take doses  
+- View **cheapest pharmacy prices** for a medication by ZIP code  
+- Enjoy an accessible, soft, healthcare-friendly UI with **light & dark pastel themes**
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ✨ Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 🔐 Email/password auth via Supabase
+- 📋 Add / edit / delete medications
+- ⏰ Local notifications for daily reminders
+- 📉 Pill count auto-decrements when a dose is taken
+- ⚠️ Refill alerts when remaining pills fall below a threshold
+- 🏥 Pharmacy price lookup screen (drug + ZIP)
+- 🌸 Light & dark pastel themes
+- 📱 Works on Android, iOS, and Web (with some notification caveats)
+
+---
+
+## 🛠 Tech Stack
+
+- Flutter 3
+- Supabase (Auth + Postgres + RLS)
+- flutter_local_notifications
+- timezone
+- http
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone this repo**
+
+```bash
+git clone https://github.com/YOUR_USERNAME/remind-me-ds.git
+cd remind-me-ds
