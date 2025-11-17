@@ -34,9 +34,26 @@ Remind Me(ds) is a pastel-styled, cross-platform medication management app built
 - http
 
 ---
-All rights reserved.
+⚠️ Copyright & Usage Notice
 
-The source code in this repository is proprietary and may not be copied,
-modified, published, distributed, or used in any form without explicit
-written permission from the author.
+© 2025 Anjali Joseph — Sole Developer. All Rights Reserved.
 
+This project is entirely created and owned by one developer.
+No part of the code, design, or content in this repository may be:
+
+Copied
+
+Reused
+
+Modified
+
+Distributed
+
+Re-uploaded
+
+Claimed as your own
+
+Used in any personal, academic, or commercial project
+
+This repository is public for viewing only.
+Any unauthorized use will result in a DMCA takedown.
