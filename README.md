@@ -34,11 +34,9 @@ Remind Me(ds) is a pastel-styled, cross-platform medication management app built
 - http
 
 ---
+All rights reserved.
 
-## 🚀 Getting Started
+The source code in this repository is proprietary and may not be copied,
+modified, published, distributed, or used in any form without explicit
+written permission from the author.
 
-1. **Clone this repo**
-
-```bash
-git clone https://github.com/YOUR_USERNAME/remind-me-ds.git
-cd remind-me-ds
