@@ -1,6 +1,6 @@
 # Remind Me(ds) 💊
 
-> **Your meds, your schedule, and your health cared for.**
+**Caring for your health, one reminder at a time.**
 
 Remind Me(ds) is a pastel-styled, cross-platform medication management app built with **Flutter** and **Supabase**. It helps users:
 
