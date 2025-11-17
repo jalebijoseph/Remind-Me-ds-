@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Text("Remind Me(ds)", style: textTheme.titleLarge),
                 const SizedBox(height: 6),
                 const Text(
-                  "Your meds, your schedule, and your health cared for.",
+                  "Caring for your health, one reminder at a time💊⏰.",
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 32),
