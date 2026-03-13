@@ -42,9 +42,15 @@ timezone
 
 http
 
-OVERVIEW OF REMIND ME(DS)
-Anjali Joseph founded Remind Me(ds) after seeing firsthand how difficult it is to remember to take medicines, not only for patients but also 
+OVERVIEW OF REMIND ME(DS)💊
+
+I founded Remind Me(ds) after seeing firsthand how difficult it is to remember to take medicines, not only for patients but also 
 caregivers, and how difficult it is to keep track of medicines. This app aims to simplify the caregiving process by reminding patients and caregivers when to take medicines at set times and also notifies the caregiver when to refill the medicine. The app increases accessiblity by using API's to find the most affordable options for patients using their zip code and insurance plans. In order to further accessibilty, the app utilizes different font sizes, color schemas for a more user friendly interface. 
+
+
+ABOUT THE FOUNDER👩🏽‍🎓
+
+Hello! My name is Anjali Joseph and I am computer science major with a focus in healthcare. This app was made with a core focus in mind: to bridge the gap between healthcare and accessibility. Approximately 50-60% of adults in the US alone take medicine and roughly 1 in 3 adults report skipping doses, cutting pills, or not filling prescriptions in the past year and 26% of adults report difficulty paying for prescription drugs. In order to alleviate this gap, I created this app to help users remember to take medicines and find accessible and affordable options for users.
 
 
 **⚠️ Copyright & Usage Notice⚠️**
